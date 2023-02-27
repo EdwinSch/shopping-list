@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <!-- Styles && Fav Icon -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/space-invader-32.png" />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- JS -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <!-- HEADER -->
+      <header>
+        <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+        <h1>Shopping List</h1>
+      </header>
+
+      <!-- FORM -->
+      <form class="grocery-form">
+        <p class="alert"></p>
+        <div class="form-control">
+          <input
+            type="text"
+            name="grocery-item"
+            id="grocery-item"
+            placeholder="add shopping item"
+          />
+          <button type="submit" class="submit-btn">add</button>
+        </div>
+      </form>
+      <!-- LIST -->
+      <div class="items-container">
+        <div class="items-list">
+          <article class="item">
+            <p class="title">some item</p>
+            <div class="btn-container">
+              <button type="button" class="edit-btn">
+                <i class="fa-sharp fa-solid fa-pen-to-square"></i>
+              </button>
+              <button type="button" class="delete-btn">
+                <i class="fa-sharp fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+        <button type="button" class="clear-btn">clear items</button>
+      </div>
+    </main>
+  </body>
+</html>
