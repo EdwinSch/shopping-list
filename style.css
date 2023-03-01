@@ -51,6 +51,14 @@ header {
   margin: 2rem 0;
   text-align: center;
 }
+.alert {
+  margin-top: 0.3rem;
+  height: 22px;
+  padding-left: 10px;
+}
+.alert-danger {
+  color: red;
+}
 .fa-cart-shopping {
   font-size: 1.5rem;
 }
@@ -58,6 +66,9 @@ h1 {
   font-size: 1.75rem;
   letter-spacing: 2px;
   font-weight: 600;
+}
+form {
+  /* border: var(--inspect); */
 }
 .form-control {
   display: flex;
@@ -93,7 +104,8 @@ input[type="text"] {
   color: var(--white);
 }
 .items-container {
-  margin-top: 2rem;
+  /* border: var(--inspect); */
+  margin-top: 1rem;
   transition: 0.25s ease;
   /* visibility: hidden; */
 }
