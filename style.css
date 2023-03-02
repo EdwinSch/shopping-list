@@ -48,16 +48,25 @@ main {
   border-radius: 0.5rem;
 }
 header {
-  margin: 2rem 0;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .alert {
-  margin-top: 0.3rem;
-  height: 22px;
-  padding-left: 10px;
+  margin-bottom: 1rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
 }
 .alert-danger {
   color: red;
+  background-color: rgb(253, 238, 238);
+}
+.alert-success {
+  color: mediumseagreen;
+  background-color: rgb(238, 255, 246);
 }
 .fa-cart-shopping {
   font-size: 1.5rem;
@@ -66,9 +75,6 @@ h1 {
   font-size: 1.75rem;
   letter-spacing: 2px;
   font-weight: 600;
-}
-form {
-  /* border: var(--inspect); */
 }
 .form-control {
   display: flex;

@@ -27,8 +27,7 @@ form.addEventListener("submit", function (event) {
   } else if (value !== "" && editFlag === true) {
     console.log("edit mode");
   } else {
-    alert.classList.add("alert-danger");
-    alert.textContent = "empty input";
+    displayAlert("alert-danger", "empty input");
   }
 });
 
@@ -41,4 +40,15 @@ function createID() {
     id += int;
   }
   return id;
+}
+
+// Show/Hide multifunction alert
+function displayAlert(alertClass, text) {
+  alert.classList.add(alertClass);
+  alert.textContent = text;
+
+  setTimeout(() => {
+    alert.textContent = "";
+    alert.classList.remove(alertClass);
+  }, 1000);
 }
