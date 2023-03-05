@@ -39,9 +39,14 @@ form.addEventListener("submit", function (event) {
                 <i class="fa-sharp fa-solid fa-trash"></i>
               </button>
             </div>`;
+    // append the new item to the list
     itemsList.appendChild(newItem);
     // diplay success alert
     displayAlert("alert-success", "item added");
+    // Get delete item button and add event listener
+    const deleteBtn = newItem.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", deleteItem);
+    // Get edit item button
 
     // add to local storage
     // reset input field
@@ -88,6 +93,16 @@ function resetDefault() {
   submitBtn.textContent = "submit";
 }
 
+// Delete items buttons function
+function deleteItem(event) {
+  const targetElement = event.currentTarget.parentElement.parentElement;
+  const targetId = targetElement.dataset.id;
+  console.log(targetId);
+  itemsList.removeChild(targetElement);
+  displayAlert("alert-success", "item deleted");
+  resetDefault();
+}
+
 // clear items function
 function clearItems() {
   const items = document.querySelectorAll(".item");
@@ -101,3 +116,5 @@ function clearItems() {
     displayAlert("alert-danger", "no items on list");
   }
 }
+
+/* ---- LOCAL STORAGE FUNCTIONS ---- */
