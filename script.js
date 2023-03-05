@@ -53,6 +53,9 @@ form.addEventListener("submit", function (event) {
   }
 });
 
+// Clear List
+clearBtn.addEventListener("click", clearItems);
+
 /* ---- FUNCTIONS ---- */
 
 // Create unique ID for list items
@@ -83,4 +86,18 @@ function resetDefault() {
   editFlag = false;
   editID = "";
   submitBtn.textContent = "submit";
+}
+
+// clear items function
+function clearItems() {
+  const items = document.querySelectorAll(".item");
+  if (items.length > 0) {
+    items.forEach((item) => {
+      itemsList.removeChild(item);
+      displayAlert("alert-success", "all items cleared");
+      resetDefault();
+    });
+  } else {
+    displayAlert("alert-danger", "no items on list");
+  }
 }
