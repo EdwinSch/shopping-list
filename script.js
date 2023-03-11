@@ -46,13 +46,18 @@ form.addEventListener("submit", function (event) {
     // Get delete item button and add event listener
     const deleteBtn = newItem.querySelector(".delete-btn");
     deleteBtn.addEventListener("click", deleteItem);
-    // Get edit item button
-
+    // Get edit item button and add event listener
+    const editBtn = newItem.querySelector(".edit-btn");
+    editBtn.addEventListener("click", editItem);
     // add to local storage
+
     // reset input field
     resetDefault();
   } else if (value !== "" && editFlag === true) {
-    console.log("edit mode");
+    editElement.innerHTML = value;
+    displayAlert("alert-success", "item editted");
+    // edit local storage
+    resetDefault();
   } else {
     displayAlert("alert-danger", "empty input");
   }
@@ -93,6 +98,16 @@ function resetDefault() {
   submitBtn.textContent = "submit";
 }
 
+// Edit Item function
+function editItem(event) {
+  const targetElement = event.currentTarget.parentElement.parentElement;
+  editElement = event.currentTarget.parentElement.previousElementSibling;
+  getItem.value = editElement.innerHTML;
+  editFlag = true;
+  editID = targetElement.dataset.id;
+  submitBtn.textContent = "edit";
+}
+
 // Delete items buttons function
 function deleteItem(event) {
   const targetElement = event.currentTarget.parentElement.parentElement;
@@ -109,7 +124,7 @@ function clearItems() {
   if (items.length > 0) {
     items.forEach((item) => {
       itemsList.removeChild(item);
-      displayAlert("alert-success", "all items cleared");
+      displayAlert("alert-success", "all items deleted");
       resetDefault();
     });
   } else {

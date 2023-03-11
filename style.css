@@ -42,7 +42,7 @@ body {
 }
 main {
   padding: 20px;
-  margin: 3rem auto;
+  margin: 1rem auto;
   max-width: 35rem;
   background-color: var(--white);
   border-radius: 0.5rem;
