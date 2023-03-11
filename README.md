@@ -1,4 +1,6 @@
-## Project under development, version 1.0.0 to be released.
+## Shopping List
+
+🚀 [DEPLOYMENT ENVIRONMENT](https://edwinsch.github.io/shopping-list/)
 
 ### About
 
@@ -8,5 +10,3 @@ This practice project is a little twist on the classic ToDo List. Made with Java
 
 - Add, delete and edit items on the list.
 - Action notifications
-
-🚀 [SOME LINK](https://google.com)
